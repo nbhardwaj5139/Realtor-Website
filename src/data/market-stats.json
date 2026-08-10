@@ -45,28 +45,88 @@
     "listToSaleRatio": 99.1
   },
   "monthly": [
-    { "month": "Aug 2025", "median": 786000, "sales": 612, "dom": 27 },
-    { "month": "Sep 2025", "median": 791000, "sales": 648, "dom": 26 },
-    { "month": "Oct 2025", "median": 784000, "sales": 601, "dom": 29 },
-    { "month": "Nov 2025", "median": 776000, "sales": 524, "dom": 31 },
-    { "month": "Dec 2025", "median": 772000, "sales": 398, "dom": 34 },
-    { "month": "Jan 2026", "median": 781000, "sales": 421, "dom": 32 },
-    { "month": "Feb 2026", "median": 793000, "sales": 538, "dom": 28 },
-    { "month": "Mar 2026", "median": 804000, "sales": 689, "dom": 24 },
-    { "month": "Apr 2026", "median": 818000, "sales": 742, "dom": 21 },
-    { "month": "May 2026", "median": 824000, "sales": 771, "dom": 19 },
-    { "month": "Jun 2026", "median": 819000, "sales": 728, "dom": 22 },
-    { "month": "Jul 2026", "median": 812400, "sales": 684, "dom": 24 }
+    {
+      "month": "Aug 2025",
+      "median": 786000,
+      "sales": 612,
+      "dom": 27
+    },
+    {
+      "month": "Sep 2025",
+      "median": 791000,
+      "sales": 648,
+      "dom": 26
+    },
+    {
+      "month": "Oct 2025",
+      "median": 784000,
+      "sales": 601,
+      "dom": 29
+    },
+    {
+      "month": "Nov 2025",
+      "median": 776000,
+      "sales": 524,
+      "dom": 31
+    },
+    {
+      "month": "Dec 2025",
+      "median": 772000,
+      "sales": 398,
+      "dom": 34
+    },
+    {
+      "month": "Jan 2026",
+      "median": 781000,
+      "sales": 421,
+      "dom": 32
+    },
+    {
+      "month": "Feb 2026",
+      "median": 793000,
+      "sales": 538,
+      "dom": 28
+    },
+    {
+      "month": "Mar 2026",
+      "median": 804000,
+      "sales": 689,
+      "dom": 24
+    },
+    {
+      "month": "Apr 2026",
+      "median": 818000,
+      "sales": 742,
+      "dom": 21
+    },
+    {
+      "month": "May 2026",
+      "median": 824000,
+      "sales": 771,
+      "dom": 19
+    },
+    {
+      "month": "Jun 2026",
+      "median": 819000,
+      "sales": 728,
+      "dom": 22
+    },
+    {
+      "month": "Jul 2026",
+      "median": 812400,
+      "sales": 684,
+      "dom": 24
+    }
   ],
   "process": [
     {
       "step": 1,
       "title": "Pre-list strategy & staging",
-      "duration": "Week 1–2",
+      "duration": "Week 1\u20132",
       "summary": "We walk the house with our stager and build a room-by-room prep list ranked by return per dollar. Trades are booked from our roster, not yours.",
       "details": [
         "Room-by-room prep list with cost/return estimates",
-        "Professional staging — furniture and styling included, not billed",
+        "Professional staging \u2014 furniture and styling included, not billed",
         "Trade coordination: paint, repair, deep clean, landscaping",
         "Pre-list inspection so surprises never arrive on offer day"
       ],
@@ -88,8 +148,8 @@
     {
       "step": 3,
       "title": "Targeted Meta & Google campaigns",
-      "duration": "Week 2–3",
-      "summary": "Your listing runs as a paid campaign, not just an MLS entry — geo-targeted at GTA move-out intent and retargeted to everyone who viewed the 3D tour.",
+      "duration": "Week 2\u20133",
+      "summary": "Your listing runs as a paid campaign, not just an MLS entry \u2014 geo-targeted at GTA move-out intent and retargeted to everyone who viewed the 3D tour.",
       "details": [
         "Geo-fenced Meta campaign targeting GTA relocation intent",
         "Google search coverage on neighbourhood + street-name queries",
@@ -102,7 +162,7 @@
       "step": 4,
       "title": "VIP preview & agent-only opening",
       "duration": "Week 3",
-      "summary": "Before the public sees it, the listing goes to our buyer database and a curated agent list — so week one opens with warm demand instead of cold traffic.",
+      "summary": "Before the public sees it, the listing goes to our buyer database and a curated agent list \u2014 so week one opens with warm demand instead of cold traffic.",
       "details": [
         "Coming-soon email to our active buyer database",
         "Agent-only preview with feedback collection",
@@ -114,8 +174,8 @@
     {
       "step": 5,
       "title": "Offer day strategy & negotiation",
-      "duration": "Week 3–4",
-      "summary": "We set the offer date, qualify every agent who registers, and negotiate with a written escalation plan you approve in advance — no decisions made under pressure.",
+      "duration": "Week 3\u20134",
+      "summary": "We set the offer date, qualify every agent who registers, and negotiate with a written escalation plan you approve in advance \u2014 no decisions made under pressure.",
       "details": [
         "Offer date set to concentrate demand into one window",
         "Every registered agent qualified for financing and conditions",
@@ -128,6 +188,6 @@
   "stagingSlider": {
     "before": "https://images.unsplash.com/photo-1503174971373-b1f69850bded?auto=format&fit=crop&w=1600&q=70",
     "after": "https://images.unsplash.com/photo-1600210492486-724fe5c84ab3?auto=format&fit=crop&w=1600&q=70",
-    "caption": "312 Laurelwood Drive — vacant walkthrough vs. staged listing photo. Sold 4 days later, $52K over asking."
+    "caption": "Vacant walkthrough versus the staged listing photo. Sample images shown to demonstrate the comparison slider."
   }
 }

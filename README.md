@@ -27,7 +27,7 @@ copy generator uses built-in templates. Add keys when you want the real thing.
 | **Featured listings** | Filter by status, property type and price band. Video-tour modal, and a "Schedule a private tour" booking modal. |
 | **Selling with us** | Interactive five-step listing process timeline, plus a draggable before/after staging slider. |
 | **Calculators** | Mortgage payment (Canadian semi-annual compounding, CMHC premiums, accelerated bi-weekly) and Ontario land transfer tax with the first-time buyer rebate — including what the same purchase would cost in Toronto. |
-| **Social proof** | Animated stats counters benchmarked against the regional average, and a video testimonial carousel. |
+| **Market snapshot** | Regional Waterloo Region figures. Team track record and testimonials are built but switched **off** by default — see Content flags. |
 | **Contact** | Direct enquiry form wired to the same lead pipeline. |
 
 ### Admin dashboard (`/admin`)
@@ -83,47 +83,68 @@ and never block a visitor from seeing their result.
 
 ---
 
-## Re-branding
+## Branding & what still needs filling in
 
-Edit `src/config/site.ts` — team name, tagline, brokerage, phone, email, office,
-socials, agent bios and nav all come from that one file. Colours and type are in
-`tailwind.config.ts` and `src/app/globals.css`.
+All branding lives in `src/config/site.ts`. The team name and agent names are
+set; **the fields below are deliberately blank** and the UI hides each element
+until a real value is supplied — nothing is invented:
+
+| Field | Notes |
+|---|---|
+| `brokerage` | Required in Ontario real estate advertising. |
+| `phone` / `phoneHref` | Nav, footer and contact block hide the row while blank. |
+| `email`, `office` | Same. Team lead alerts are skipped until an inbox exists. |
+| `agents[].role` | **"Broker", "Broker of Record" and "Salesperson" are regulated designations under REBBA** — use each agent's actual registration title, don't guess. |
+| `agents[].bio` | Hidden while blank. |
+| `social.*` | Icons render only for URLs that are set. |
+
+Colours and type are in `tailwind.config.ts` and `src/app/globals.css`.
+
+### Content flags
+
+`siteConfig.content` controls what renders:
+
+| Flag | Default | Effect |
+|---|---|---|
+| `showPerformanceStats` | `false` | Team track record (sales volume, days on market, list-to-sale). **Off because publishing a record that wasn't supplied would be fabricating claims under a real agent's name.** Turn on only with real, verifiable figures. |
+| `showTestimonials` | `false` | Client testimonial carousel. Off for the same reason; also drops the Reviews nav link. |
+| `demoMode` | `true` | Shows a dismissible "demo build · sample data" badge, labels sample listings, and adds a sample-data line to the footer disclaimer. |
 
 ---
 
 ## About the data
 
-**All content in `src/data/` is demo data**, and the team name, agents,
-testimonials, sales figures and listings are fictional placeholders written to
-make the platform demonstrable out of the box. The neighbourhood geography,
-commute structure and school boards reflect real Waterloo Region, but the prices
-and statistics are illustrative — replace them with MLS/CREA data before launch.
+**Everything in `src/data/` is sample data.** Listings, addresses, sale prices,
+neighbourhood medians and regional statistics are placeholders for layout — they
+are not real properties or transactions. The neighbourhood geography, commute
+structure and school boards reflect real Waterloo Region, but the numbers are
+illustrative.
 
-Two things need real inputs before this goes live:
+Before this is anything other than a demo:
 
-1. **Listings and market stats** — swap the JSON files for an MLS/DDF feed.
+1. **Listings and market stats** — swap the JSON files for an MLS/DDF or CREA feed.
 2. **The valuation model** — `src/lib/valuation.ts` is a transparent,
-   deterministic estimator over the mock neighbourhood dataset, not an AVM. It
-   exists to give a visitor a defensible-looking range and start a conversation.
-   Point `estimateValue()` at a real AVM when you have one; the UI depends only
-   on the shape of the result.
+   deterministic estimator over the sample dataset, **not an AVM and not an
+   appraisal**. It exists to give a visitor a defensible-looking range and start
+   a conversation. Point `estimateValue()` at a real AVM when you have one; the
+   UI depends only on the shape of the result.
+3. **Turn off `demoMode`** once 1 and 2 are done.
 
 The Ontario land transfer tax brackets, first-time buyer rebate, CMHC premium
 tiers and minimum down payment rules in `src/lib/ontario-tax.ts` and
 `src/lib/mortgage.ts` are real and current as of the 2025 tax year — but they do
-change. Verify against ontario.ca before relying on them, and note that the site
-footer already carries an estimates-only disclaimer.
+change. Verify against ontario.ca before relying on them.
 
 ---
 
 ## Compliance notes
 
-The public site avoids describing buyers rather than properties, and the Claude
-prompt in `src/lib/listing-kit.ts` is instructed against Ontario Human Rights
-Code violations and guaranteed-return claims. That is a guardrail, not a
-substitute for review — have your brokerage approve copy before it goes on MLS,
-and confirm RECO/CREA advertising requirements (brokerage name, registrant
-titles) are met in `src/config/site.ts`.
+The public site describes properties rather than buyers, and the Claude prompt
+in `src/lib/listing-kit.ts` is instructed against Ontario Human Rights Code
+violations and guaranteed-return claims. That is a guardrail, not a substitute
+for review — have the brokerage approve copy before it goes on MLS, and confirm
+RECO/CREA advertising requirements (brokerage name, registrant titles) are met
+in `src/config/site.ts`.
 
 ---
 

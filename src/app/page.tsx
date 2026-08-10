@@ -8,30 +8,36 @@ import { CalculatorSection } from '@/components/site/calculator';
 import { TestimonialsCarousel } from '@/components/site/testimonials-carousel';
 import { ContactCta } from '@/components/site/contact-cta';
 import { Footer } from '@/components/site/footer';
+import { DemoBadge } from '@/components/site/demo-badge';
 import { siteConfig } from '@/config/site';
 
 /** JSON-LD so the team shows up correctly in local search results. */
 function StructuredData() {
+  // Only emit fields that have real values — blank entries in structured data
+  // are worse than omitting them.
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'RealEstateAgent',
     name: siteConfig.teamLong,
     description: siteConfig.description,
-    telephone: siteConfig.phone,
-    email: siteConfig.email,
     url: siteConfig.url,
     areaServed: ['Kitchener', 'Waterloo', 'Cambridge', 'Waterloo Region, Ontario'],
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: siteConfig.office,
-      addressLocality: 'Kitchener',
-      addressRegion: 'ON',
-      addressCountry: 'CA',
-    },
+    ...(siteConfig.phone ? { telephone: siteConfig.phone } : {}),
+    ...(siteConfig.email ? { email: siteConfig.email } : {}),
+    ...(siteConfig.office
+      ? {
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: siteConfig.office,
+            addressRegion: 'ON',
+            addressCountry: 'CA',
+          },
+        }
+      : {}),
     employee: siteConfig.agents.map((a) => ({
       '@type': 'Person',
       name: a.name,
-      jobTitle: a.role,
+      ...(a.role ? { jobTitle: a.role } : {}),
     })),
   };
 
@@ -55,10 +61,11 @@ export default function HomePage() {
         <ListingsShowcase />
         <SellingProcess />
         <CalculatorSection />
-        <TestimonialsCarousel />
+        {siteConfig.content.showTestimonials && <TestimonialsCarousel />}
         <ContactCta />
       </main>
       <Footer />
+      <DemoBadge />
     </>
   );
 }

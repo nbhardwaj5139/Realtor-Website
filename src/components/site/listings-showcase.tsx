@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog';
 import { SectionHeading } from '@/components/ui/section-heading';
 import { TourDialog } from './tour-dialog';
+import { siteConfig } from '@/config/site';
 import { listings, neighbourhoods } from '@/lib/data';
 import { cn, formatCurrency } from '@/lib/utils';
 import type { Listing, ListingStatus } from '@/lib/types';
@@ -56,9 +57,13 @@ export function ListingsShowcase() {
     <section id="listings" className="section bg-white">
       <div className="container">
         <SectionHeading
-          eyebrow="Featured listings"
+          eyebrow={siteConfig.content.demoMode ? 'Featured listings · sample data' : 'Featured listings'}
           title="Homes we're representing right now."
-          description="Every listing below launched with staging, architectural photography, a 3D tour and a paid campaign behind it. That's the whole difference."
+          description={
+            siteConfig.content.demoMode
+              ? 'Placeholder listings shown to demonstrate the layout, filters and booking flow. Connect an MLS or CREA feed to publish live inventory here.'
+              : 'Every listing below launched with staging, architectural photography, a 3D tour and a paid campaign behind it.'
+          }
           action={
             <Button asChild variant="outline">
               <a href="#contact">Get new listings first</a>
@@ -210,9 +215,8 @@ function ListingCard({
 
         <div className="absolute left-4 top-4 flex flex-wrap gap-2">
           <Badge variant={meta.variant}>{meta.label}</Badge>
-          {overAsk > 0 && (
-            <Badge variant="glass">+{formatCurrency(overAsk)} over</Badge>
-          )}
+          {overAsk > 0 && <Badge variant="glass">+{formatCurrency(overAsk)} over</Badge>}
+          {siteConfig.content.demoMode && <Badge variant="glass">Sample</Badge>}
         </div>
 
         <button

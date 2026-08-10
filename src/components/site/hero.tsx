@@ -2,16 +2,19 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { ArrowDown, MapPin, Star } from 'lucide-react';
+import { ArrowDown, Clock, Lock, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ValuationWizard } from './valuation-wizard';
-import { marketStats } from '@/lib/data';
-import { formatCompactCurrency } from '@/lib/utils';
 
+/**
+ * Non-performance trust signals — these describe how the tool works, not a
+ * track record. Team statistics render only once real figures are supplied
+ * (see siteConfig.content.showPerformanceStats).
+ */
 const trustPoints = [
-  { value: '486', label: 'Families moved' },
-  { value: '11 days', label: 'Avg. on market' },
-  { value: '102.4%', label: 'List-to-sale' },
+  { icon: Clock, label: 'Takes about 40 seconds' },
+  { icon: Lock, label: 'No account required' },
+  { icon: MapPin, label: '12 KW neighbourhoods' },
 ];
 
 export function Hero() {
@@ -83,26 +86,14 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.36 }}
-            className="mt-12 flex flex-wrap items-center gap-x-10 gap-y-6 border-t border-white/10 pt-8"
+            className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-4 border-t border-white/10 pt-8"
           >
-            {trustPoints.map((point) => (
-              <div key={point.label}>
-                <p className="heading-serif text-2xl font-semibold text-white">{point.value}</p>
-                <p className="mt-1 text-xs uppercase tracking-[0.14em] text-white/45">
-                  {point.label}
-                </p>
+            {trustPoints.map(({ icon: Icon, label }) => (
+              <div key={label} className="flex items-center gap-2.5">
+                <Icon className="h-4 w-4 text-gold" />
+                <p className="text-sm text-white/60">{label}</p>
               </div>
             ))}
-            <div className="flex items-center gap-2">
-              <div className="flex">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-gold text-gold" />
-                ))}
-              </div>
-              <span className="text-xs text-white/55">
-                {formatCompactCurrency(marketStats.headline[0].value)} sold
-              </span>
-            </div>
           </motion.div>
         </div>
 

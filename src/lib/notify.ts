@@ -14,6 +14,14 @@ import type { Lead } from './types';
  *   CRM_WEBHOOK_URL       → Follow Up Boss / Zapier / Make webhook for lead sync
  */
 
+/** Phone link, or an empty string when no number is configured yet. */
+const phoneLink = siteConfig.phone
+  ? `<a href="${siteConfig.phoneHref}">${siteConfig.phone}</a>`
+  : '';
+
+/** Trailing "call or text X" clause, omitted entirely when there is no number. */
+const callClause = siteConfig.phone ? ` or call ${phoneLink}` : '';
+
 type EmailPayload = { to: string; subject: string; html: string; replyTo?: string };
 
 async function sendEmail({ to, subject, html, replyTo }: EmailPayload) {
@@ -88,13 +96,16 @@ const shell = (body: string) => `
     </div>
     <div style="padding:32px;color:#0F172A;line-height:1.6;font-size:15px;">${body}</div>
     <div style="padding:20px 32px;background:#F8F6F0;color:#64748b;font-size:12px;line-height:1.5;">
-      ${siteConfig.brokerage}<br/>${siteConfig.office} · ${siteConfig.phone}
+      ${[siteConfig.brokerage, siteConfig.office, siteConfig.phone].filter(Boolean).join(" · ")}
     </div>
   </div>
 </div>`;
 
 /** Fires on every new lead: alert the team, auto-respond to the visitor, sync CRM. */
 export async function handleNewLead(lead: Lead) {
+  // siteConfig.email may be blank until real details are supplied — in that
+  // case there is no team alert to send, but the lead is still stored and the
+  // visitor still gets their auto-responder.
   const teamInbox = process.env.NOTIFY_TO_EMAIL || siteConfig.email;
 
   const detail = lead.valuation
@@ -111,7 +122,8 @@ export async function handleNewLead(lead: Lead) {
         : '';
 
   const results = await Promise.allSettled([
-    sendEmail({
+    teamInbox
+      ? sendEmail({
       to: teamInbox,
       replyTo: lead.email,
       subject: `New ${lead.type} lead — ${lead.name}`,
@@ -121,7 +133,8 @@ export async function handleNewLead(lead: Lead) {
         <a href="mailto:${lead.email}">${lead.email}</a>${lead.phone ? ` · ${escapeHtml(lead.phone)}` : ''}</p>
         ${detail}
         <p style="margin-top:24px;"><a href="${siteConfig.url}/admin" style="background:#0F172A;color:#fff;padding:12px 20px;border-radius:8px;text-decoration:none;display:inline-block;">Open the lead inbox</a></p>`),
-    }),
+        })
+      : Promise.resolve({ provider: 'noop' as const }),
     sendEmail({
       to: lead.email,
       subject: autoResponderSubject(lead),
@@ -156,7 +169,7 @@ function autoResponderBody(lead: Lead) {
       </p>
       <p>That's an algorithmic starting point from recent ${escapeHtml(v.neighbourhoodName)} activity — it hasn't seen your finishes, your lot or your light. We'll follow up within one business day with the full comparable breakdown and a walk-through of what would move the number.</p>
       <p style="margin-top:24px;">— ${siteConfig.agents.map((a) => a.name).join(' & ')}<br/>
-      <a href="${siteConfig.phoneHref}">${siteConfig.phone}</a></p>`;
+      ${phoneLink}</p>`;
   }
 
   if (lead.tour) {
@@ -166,14 +179,14 @@ function autoResponderBody(lead: Lead) {
       ${escapeHtml(lead.tour.preferredDate)} at ${escapeHtml(lead.tour.preferredTime)}
       (${lead.tour.tourType === 'virtual' ? 'virtual walkthrough' : 'in person'}).</p>
       <p>One of us will confirm the exact time shortly. If it's urgent, call or text
-      <a href="${siteConfig.phoneHref}">${siteConfig.phone}</a> — we answer.</p>
+      ${phoneLink} — we answer.</p>
       <p style="margin-top:24px;">— ${siteConfig.agents.map((a) => a.name).join(' & ')}</p>`;
   }
 
   return `
     <h2 style="margin:0 0 16px;font-size:20px;">Hi ${first}, thanks for reaching out</h2>
     <p>We've received your message and will reply within one business day. For anything
-    time-sensitive, call or text <a href="${siteConfig.phoneHref}">${siteConfig.phone}</a>.</p>
+    time-sensitive, reply to this email${callClause}.</p>
     <p style="margin-top:24px;">— ${siteConfig.agents.map((a) => a.name).join(' & ')}</p>`;
 }
 
@@ -198,7 +211,7 @@ export async function sendCmaEmail(lead: Lead) {
             <td style="padding:8px 0;text-align:right;font-weight:600;">${escapeHtml(v.propertyType)} · ${v.beds} bed · ${v.baths} bath</td></tr>
       </table>
       <p>Ready to talk pricing strategy? Reply to this email or call
-      <a href="${siteConfig.phoneHref}">${siteConfig.phone}</a>.</p>`),
+      ${phoneLink || 'this email'}.</p>`),
   });
 }
 

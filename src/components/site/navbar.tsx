@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Menu, Phone, X } from 'lucide-react';
-import { siteConfig } from '@/config/site';
+import { siteConfig, siteNav } from '@/config/site';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
@@ -58,7 +58,7 @@ export function Navbar() {
           </Link>
 
           <div className="hidden items-center gap-8 lg:flex">
-            {siteConfig.nav.map((item) => (
+            {siteNav.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -73,16 +73,18 @@ export function Navbar() {
           </div>
 
           <div className="flex items-center gap-3">
-            <a
-              href={siteConfig.phoneHref}
-              className={cn(
-                'hidden items-center gap-2 text-sm font-medium transition-colors md:flex',
-                scrolled ? 'text-slate-ink hover:text-gold-bright' : 'text-white hover:text-gold-soft',
-              )}
-            >
-              <Phone className="h-4 w-4" />
-              {siteConfig.phone}
-            </a>
+            {siteConfig.phone && (
+              <a
+                href={siteConfig.phoneHref}
+                className={cn(
+                  'hidden items-center gap-2 text-sm font-medium transition-colors md:flex',
+                  scrolled ? 'text-slate-ink hover:text-gold-bright' : 'text-white hover:text-gold-soft',
+                )}
+              >
+                <Phone className="h-4 w-4" />
+                {siteConfig.phone}
+              </a>
+            )}
             <Button asChild variant={scrolled ? 'default' : 'gold'} size="sm" className="hidden sm:inline-flex">
               <Link href="/#valuation">Get my home value</Link>
             </Button>
@@ -121,7 +123,7 @@ export function Navbar() {
             </div>
 
             <div className="container flex flex-col gap-1 pt-8">
-              {siteConfig.nav.map((item, i) => (
+              {siteNav.map((item, i) => (
                 <motion.div
                   key={item.href}
                   initial={{ opacity: 0, x: -20 }}
@@ -144,11 +146,13 @@ export function Navbar() {
                     Get my home value
                   </Link>
                 </Button>
-                <Button asChild variant="light" size="lg">
-                  <a href={siteConfig.phoneHref}>
-                    <Phone className="h-4 w-4" /> {siteConfig.phone}
-                  </a>
-                </Button>
+                {siteConfig.phone && (
+                  <Button asChild variant="light" size="lg">
+                    <a href={siteConfig.phoneHref}>
+                      <Phone className="h-4 w-4" /> {siteConfig.phone}
+                    </a>
+                  </Button>
+                )}
               </div>
             </div>
           </motion.div>

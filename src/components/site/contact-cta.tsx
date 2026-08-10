@@ -9,7 +9,7 @@ import { Input, Textarea } from '@/components/ui/input';
 import { Label, FieldError } from '@/components/ui/label';
 import { Reveal } from '@/components/ui/reveal';
 import { useToast } from '@/components/ui/toast';
-import { siteConfig } from '@/config/site';
+import { siteConfig, hasContactDetails } from '@/config/site';
 import { contactSchema, type ContactFormValues } from '@/lib/schemas';
 
 export function ContactCta() {
@@ -73,35 +73,47 @@ export function ContactCta() {
                     <p className="heading-serif text-lg font-semibold text-slate-ink">
                       {agent.name}
                     </p>
-                    <p className="text-xs uppercase tracking-wider text-gold">{agent.role}</p>
-                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                      {agent.bio}
-                    </p>
+                    {agent.role && (
+                      <p className="text-xs uppercase tracking-wider text-gold">{agent.role}</p>
+                    )}
+                    {agent.bio && (
+                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                        {agent.bio}
+                      </p>
+                    )}
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className="mt-10 space-y-4 border-t border-border pt-8">
-              <a
-                href={siteConfig.phoneHref}
-                className="flex items-center gap-3 text-slate-ink transition-colors hover:text-gold-bright"
-              >
-                <Phone className="h-4 w-4 text-gold" />
-                <span className="font-medium">{siteConfig.phone}</span>
-              </a>
-              <a
-                href={`mailto:${siteConfig.email}`}
-                className="flex items-center gap-3 text-slate-ink transition-colors hover:text-gold-bright"
-              >
-                <Mail className="h-4 w-4 text-gold" />
-                <span className="font-medium">{siteConfig.email}</span>
-              </a>
-              <p className="flex items-start gap-3 text-muted-foreground">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
-                {siteConfig.office}
-              </p>
-            </div>
+            {hasContactDetails && (
+              <div className="mt-10 space-y-4 border-t border-border pt-8">
+                {siteConfig.phone && (
+                  <a
+                    href={siteConfig.phoneHref}
+                    className="flex items-center gap-3 text-slate-ink transition-colors hover:text-gold-bright"
+                  >
+                    <Phone className="h-4 w-4 text-gold" />
+                    <span className="font-medium">{siteConfig.phone}</span>
+                  </a>
+                )}
+                {siteConfig.email && (
+                  <a
+                    href={`mailto:${siteConfig.email}`}
+                    className="flex items-center gap-3 text-slate-ink transition-colors hover:text-gold-bright"
+                  >
+                    <Mail className="h-4 w-4 text-gold" />
+                    <span className="font-medium">{siteConfig.email}</span>
+                  </a>
+                )}
+                {siteConfig.office && (
+                  <p className="flex items-start gap-3 text-muted-foreground">
+                    <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
+                    {siteConfig.office}
+                  </p>
+                )}
+              </div>
+            )}
           </Reveal>
 
           <Reveal from="right" delay={0.1}>
@@ -113,11 +125,20 @@ export function ContactCta() {
                     Message received
                   </h3>
                   <p className="mt-3 max-w-sm text-sm leading-relaxed text-muted-foreground">
-                    One of us will reply within one business day. If it&apos;s urgent, call or text{' '}
-                    <a href={siteConfig.phoneHref} className="font-medium text-slate-ink underline underline-offset-4">
-                      {siteConfig.phone}
-                    </a>
-                    .
+                    One of us will reply within one business day.
+                    {siteConfig.phone && (
+                      <>
+                        {' '}
+                        If it&apos;s urgent, call or text{' '}
+                        <a
+                          href={siteConfig.phoneHref}
+                          className="font-medium text-slate-ink underline underline-offset-4"
+                        >
+                          {siteConfig.phone}
+                        </a>
+                        .
+                      </>
+                    )}
                   </p>
                   <Button variant="outline" className="mt-7" onClick={() => setSent(false)}>
                     Send another
