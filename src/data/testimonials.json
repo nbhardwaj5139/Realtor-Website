@@ -1,0 +1,80 @@
+[
+  {
+    "id": "t-01",
+    "name": "The Nguyen Family",
+    "location": "Laurelwood, Waterloo",
+    "type": "Seller",
+    "headline": "Sold $52,000 over asking in 4 days",
+    "quote": "We interviewed three teams. The other two talked about the market — Elena and Devon walked us through a room-by-room prep list, brought in their stager and photographer, and had a launch date on the calendar before they left. Four days later we had three offers.",
+    "result": "$1,301,000 · 4 days on market · 104% of list",
+    "rating": 5,
+    "videoUrl": "https://www.youtube.com/embed/ScMzIvxBSi4",
+    "thumbnail": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=900&q=70",
+    "avatarInitials": "NF"
+  },
+  {
+    "id": "t-02",
+    "name": "Priya & Marcus",
+    "location": "Downtown Kitchener",
+    "type": "Buyer",
+    "headline": "Relocated from Toronto without losing a commute day",
+    "quote": "I still go into the Toronto office twice a week. Devon mapped every listing against the GO schedule and told us honestly which ones would make the 6:52. We bought four blocks from the station and my commute got shorter than it was in Etobicoke.",
+    "result": "Purchased at $562,000 · 96 min door-to-door to Union",
+    "rating": 5,
+    "videoUrl": "https://www.youtube.com/embed/ScMzIvxBSi4",
+    "thumbnail": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=900&q=70",
+    "avatarInitials": "PM"
+  },
+  {
+    "id": "t-03",
+    "name": "David Okonkwo",
+    "location": "Westmount, Kitchener",
+    "type": "Seller",
+    "headline": "Four offers on an estate lot in a slow month",
+    "quote": "They told me to wait three weeks and spend $8,000 on staging and photography in a market everyone said was dead. I pushed back. They were right — four offers, $67,000 over, and the buyer told me later the drone video is what got them in the door.",
+    "result": "$1,662,000 · 7 days · 4 offers",
+    "rating": 5,
+    "videoUrl": "https://www.youtube.com/embed/ScMzIvxBSi4",
+    "thumbnail": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=70",
+    "avatarInitials": "DO"
+  },
+  {
+    "id": "t-04",
+    "name": "Sam & Jordan Reilly",
+    "location": "Lakeshore, Waterloo",
+    "type": "First-time Buyer",
+    "headline": "First home, and nobody made us feel small for asking",
+    "quote": "We had a lot of questions and a modest budget. They answered every one of them and never once pushed us above what we said we were comfortable with. The land transfer tax rebate alone paid for our appliances.",
+    "result": "Purchased at $704,000 · $4,000 FTB rebate applied",
+    "rating": 5,
+    "videoUrl": "https://www.youtube.com/embed/ScMzIvxBSi4",
+    "thumbnail": "https://images.unsplash.com/photo-1576941089067-2de3c901e126?auto=format&fit=crop&w=900&q=70",
+    "avatarInitials": "SR"
+  },
+  {
+    "id": "t-05",
+    "name": "Dr. Anita Shah",
+    "location": "Beechwood, Waterloo",
+    "type": "Seller & Buyer",
+    "headline": "Sold and bought in the same week without a bridge loan",
+    "quote": "Coordinating a sale and a purchase with two kids and a hospital schedule sounded impossible. They ran both timelines on one calendar, negotiated matching closing dates, and I never had to think about it.",
+    "result": "Sold $1,118,000 · Purchased same week · Matched closings",
+    "rating": 5,
+    "videoUrl": "https://www.youtube.com/embed/ScMzIvxBSi4",
+    "thumbnail": "https://images.unsplash.com/photo-1600573472592-401b489a3cdc?auto=format&fit=crop&w=900&q=70",
+    "avatarInitials": "AS"
+  },
+  {
+    "id": "t-06",
+    "name": "The Bergerons",
+    "location": "Hespeler Village, Cambridge",
+    "type": "Buyer",
+    "headline": "Talked us out of the wrong house twice",
+    "quote": "Twice they told us to walk away from houses we loved — once for a foundation issue, once because the price didn't hold up against the comps. That's the part you don't get from an app.",
+    "result": "Purchased at $771,000 · Third offer accepted",
+    "rating": 5,
+    "videoUrl": "https://www.youtube.com/embed/ScMzIvxBSi4",
+    "thumbnail": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=900&q=70",
+    "avatarInitials": "TB"
+  }
+]

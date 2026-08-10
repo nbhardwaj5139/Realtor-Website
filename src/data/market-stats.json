@@ -1,0 +1,133 @@
+{
+  "updated": "2026-07-01",
+  "headline": [
+    {
+      "id": "volume",
+      "label": "Total sales volume",
+      "value": 412000000,
+      "format": "currency-compact",
+      "caption": "Career to date, both agents combined"
+    },
+    {
+      "id": "dom",
+      "label": "Avg. days on market",
+      "value": 11,
+      "format": "number",
+      "suffix": " days",
+      "caption": "vs. 24 days regional average",
+      "benchmark": 24,
+      "benchmarkLabel": "KW average"
+    },
+    {
+      "id": "ratio",
+      "label": "List-to-sale price ratio",
+      "value": 102.4,
+      "format": "percent",
+      "caption": "vs. 99.1% regional average",
+      "benchmark": 99.1,
+      "benchmarkLabel": "KW average"
+    },
+    {
+      "id": "families",
+      "label": "Families moved",
+      "value": 486,
+      "format": "number",
+      "caption": "Across Kitchener, Waterloo & Cambridge"
+    }
+  ],
+  "region": {
+    "medianPrice": 812400,
+    "medianPriceYoY": 4.1,
+    "avgDaysOnMarket": 24,
+    "activeListings": 1284,
+    "monthsOfInventory": 2.4,
+    "salesYoY": 6.8,
+    "listToSaleRatio": 99.1
+  },
+  "monthly": [
+    { "month": "Aug 2025", "median": 786000, "sales": 612, "dom": 27 },
+    { "month": "Sep 2025", "median": 791000, "sales": 648, "dom": 26 },
+    { "month": "Oct 2025", "median": 784000, "sales": 601, "dom": 29 },
+    { "month": "Nov 2025", "median": 776000, "sales": 524, "dom": 31 },
+    { "month": "Dec 2025", "median": 772000, "sales": 398, "dom": 34 },
+    { "month": "Jan 2026", "median": 781000, "sales": 421, "dom": 32 },
+    { "month": "Feb 2026", "median": 793000, "sales": 538, "dom": 28 },
+    { "month": "Mar 2026", "median": 804000, "sales": 689, "dom": 24 },
+    { "month": "Apr 2026", "median": 818000, "sales": 742, "dom": 21 },
+    { "month": "May 2026", "median": 824000, "sales": 771, "dom": 19 },
+    { "month": "Jun 2026", "median": 819000, "sales": 728, "dom": 22 },
+    { "month": "Jul 2026", "median": 812400, "sales": 684, "dom": 24 }
+  ],
+  "process": [
+    {
+      "step": 1,
+      "title": "Pre-list strategy & staging",
+      "duration": "Week 1–2",
+      "summary": "We walk the house with our stager and build a room-by-room prep list ranked by return per dollar. Trades are booked from our roster, not yours.",
+      "details": [
+        "Room-by-room prep list with cost/return estimates",
+        "Professional staging — furniture and styling included, not billed",
+        "Trade coordination: paint, repair, deep clean, landscaping",
+        "Pre-list inspection so surprises never arrive on offer day"
+      ],
+      "deliverable": "Prep plan + staging install"
+    },
+    {
+      "step": 2,
+      "title": "3D tour, drone & architectural photography",
+      "duration": "Week 2",
+      "summary": "Full media day: architectural stills, twilight exteriors, 4K walkthrough video, drone, and a Matterport 3D tour that lets out-of-town buyers shop at midnight.",
+      "details": [
+        "Architectural photography with flambient blending",
+        "4K cinematic walkthrough + vertical social cut-downs",
+        "Drone exteriors and neighbourhood context shots",
+        "Matterport 3D tour with dollhouse view and floor plans"
+      ],
+      "deliverable": "Full media kit + floor plans"
+    },
+    {
+      "step": 3,
+      "title": "Targeted Meta & Google campaigns",
+      "duration": "Week 2–3",
+      "summary": "Your listing runs as a paid campaign, not just an MLS entry — geo-targeted at GTA move-out intent and retargeted to everyone who viewed the 3D tour.",
+      "details": [
+        "Geo-fenced Meta campaign targeting GTA relocation intent",
+        "Google search coverage on neighbourhood + street-name queries",
+        "Retargeting pool built from 3D tour and video viewers",
+        "Weekly performance report: reach, tour opens, saved listings"
+      ],
+      "deliverable": "Campaign dashboard access"
+    },
+    {
+      "step": 4,
+      "title": "VIP preview & agent-only opening",
+      "duration": "Week 3",
+      "summary": "Before the public sees it, the listing goes to our buyer database and a curated agent list — so week one opens with warm demand instead of cold traffic.",
+      "details": [
+        "Coming-soon email to our active buyer database",
+        "Agent-only preview with feedback collection",
+        "Broker open with catered mid-week window",
+        "Public open house Saturday and Sunday, both agents on site"
+      ],
+      "deliverable": "Pre-market showing report"
+    },
+    {
+      "step": 5,
+      "title": "Offer day strategy & negotiation",
+      "duration": "Week 3–4",
+      "summary": "We set the offer date, qualify every agent who registers, and negotiate with a written escalation plan you approve in advance — no decisions made under pressure.",
+      "details": [
+        "Offer date set to concentrate demand into one window",
+        "Every registered agent qualified for financing and conditions",
+        "Written escalation plan agreed with you before offers open",
+        "Post-firm coordination through to closing day"
+      ],
+      "deliverable": "Firm deal + closing coordination"
+    }
+  ],
+  "stagingSlider": {
+    "before": "https://images.unsplash.com/photo-1503174971373-b1f69850bded?auto=format&fit=crop&w=1600&q=70",
+    "after": "https://images.unsplash.com/photo-1600210492486-724fe5c84ab3?auto=format&fit=crop&w=1600&q=70",
+    "caption": "312 Laurelwood Drive — vacant walkthrough vs. staged listing photo. Sold 4 days later, $52K over asking."
+  }
+}

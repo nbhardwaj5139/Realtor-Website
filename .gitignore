@@ -1,0 +1,23 @@
+node_modules/
+.next/
+out/
+build/
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env
+.env
+.env*.local
+
+# local lead store (file-backed dev database)
+.data/
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts

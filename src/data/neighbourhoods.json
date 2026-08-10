@@ -1,0 +1,458 @@
+[
+  {
+    "id": "westmount",
+    "name": "Westmount",
+    "city": "Kitchener / Waterloo",
+    "tagline": "Mature canopy, estate lots, walk to Uptown",
+    "description": "The address people move up to. Wide lots, 1950s–70s custom builds and a mature tree canopy that photographs beautifully in every season. Westmount trades on scarcity — inventory is thin and well-renovated homes rarely sit.",
+    "personas": ["move-up", "families", "luxury"],
+    "medianPrice": 1145000,
+    "pricePerSqft": 468,
+    "yoyAppreciation": 4.8,
+    "avgDaysOnMarket": 14,
+    "listToSaleRatio": 101.2,
+    "salesLastQuarter": 23,
+    "walkScore": 62,
+    "commute": {
+      "googleKw": 11,
+      "rdPark": 9,
+      "ionStop": { "name": "Grand River Hospital", "minutes": 7 },
+      "goStation": 12,
+      "highway401": 18,
+      "torontoUnionGo": 108
+    },
+    "schools": [
+      { "name": "Empire Public School", "board": "WRDSB", "rating": 8.4 },
+      { "name": "St. Agnes Catholic", "board": "WCDSB", "rating": 8.1 },
+      { "name": "Kitchener-Waterloo Collegiate", "board": "WRDSB", "rating": 8.6 }
+    ],
+    "amenities": ["Westmount Golf & Country Club", "Belmont Village", "Iron Horse Trail", "Uptown Waterloo"],
+    "priceHistory": [
+      { "year": 2021, "median": 985000 },
+      { "year": 2022, "median": 1120000 },
+      { "year": 2023, "median": 1042000 },
+      { "year": 2024, "median": 1093000 },
+      { "year": 2025, "median": 1145000 }
+    ],
+    "image": "https://images.unsplash.com/photo-1572120360610-d971b9d7767c?auto=format&fit=crop&w=1400&q=70",
+    "coords": { "lat": 43.4468, "lng": -80.5128 }
+  },
+  {
+    "id": "laurelwood",
+    "name": "Laurelwood",
+    "city": "Waterloo",
+    "tagline": "Top school catchment, minutes to the R&D Park",
+    "description": "Purpose-built for families who buy for the catchment first. Laurelwood Public and Laurel Heights Secondary anchor demand, and the trail network into Laurel Creek keeps weekends local. The fastest neighbourhood in the region for well-priced detached homes.",
+    "personas": ["families", "tech", "move-up"],
+    "medianPrice": 1085000,
+    "pricePerSqft": 412,
+    "yoyAppreciation": 5.6,
+    "avgDaysOnMarket": 11,
+    "listToSaleRatio": 102.4,
+    "salesLastQuarter": 31,
+    "walkScore": 44,
+    "commute": {
+      "googleKw": 18,
+      "rdPark": 6,
+      "ionStop": { "name": "University of Waterloo", "minutes": 12 },
+      "goStation": 19,
+      "highway401": 25,
+      "torontoUnionGo": 115
+    },
+    "schools": [
+      { "name": "Laurelwood Public School", "board": "WRDSB", "rating": 9.1 },
+      { "name": "Our Lady of Lourdes", "board": "WCDSB", "rating": 8.5 },
+      { "name": "Laurel Heights Secondary", "board": "WRDSB", "rating": 8.9 }
+    ],
+    "amenities": ["Laurel Creek Conservation", "Costco Waterloo", "Boardwalk shops", "The Boardwalk YMCA"],
+    "priceHistory": [
+      { "year": 2021, "median": 929000 },
+      { "year": 2022, "median": 1064000 },
+      { "year": 2023, "median": 981000 },
+      { "year": 2024, "median": 1027000 },
+      { "year": 2025, "median": 1085000 }
+    ],
+    "image": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1400&q=70",
+    "coords": { "lat": 43.4823, "lng": -80.5734 }
+  },
+  {
+    "id": "beechwood",
+    "name": "Beechwood",
+    "city": "Waterloo",
+    "tagline": "Private pools, tennis, and a five-minute UW commute",
+    "description": "Four association enclaves with shared pools, tennis courts and clubhouses — a rare amenity package in Waterloo Region. Popular with UW and Laurier faculty who want to walk to campus and still have a backyard.",
+    "personas": ["families", "tech", "luxury"],
+    "medianPrice": 1015000,
+    "pricePerSqft": 398,
+    "yoyAppreciation": 4.1,
+    "avgDaysOnMarket": 16,
+    "listToSaleRatio": 100.4,
+    "salesLastQuarter": 18,
+    "walkScore": 51,
+    "commute": {
+      "googleKw": 16,
+      "rdPark": 5,
+      "ionStop": { "name": "University of Waterloo", "minutes": 8 },
+      "goStation": 17,
+      "highway401": 24,
+      "torontoUnionGo": 113
+    },
+    "schools": [
+      { "name": "Keatsway Public School", "board": "WRDSB", "rating": 8.3 },
+      { "name": "St. Nicholas Catholic", "board": "WCDSB", "rating": 8.0 },
+      { "name": "Waterloo Collegiate Institute", "board": "WRDSB", "rating": 8.4 }
+    ],
+    "amenities": ["Beechwood pool & tennis clubs", "University of Waterloo", "Columbia Lake", "Westvale Park"],
+    "priceHistory": [
+      { "year": 2021, "median": 892000 },
+      { "year": 2022, "median": 1008000 },
+      { "year": 2023, "median": 934000 },
+      { "year": 2024, "median": 975000 },
+      { "year": 2025, "median": 1015000 }
+    ],
+    "image": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1400&q=70",
+    "coords": { "lat": 43.4707, "lng": -80.5601 }
+  },
+  {
+    "id": "uptown-waterloo",
+    "name": "Uptown Waterloo",
+    "city": "Waterloo",
+    "tagline": "ION at the door, patios below, condos above",
+    "description": "The densest walkable core in the region. Condo towers and converted lofts sit directly on the ION line, with Vincenzo's, the Waterloo Public Square and a hundred patios inside a ten-minute walk. Strongest rental yields in KW.",
+    "personas": ["tech", "investors", "downsizers", "transit"],
+    "medianPrice": 612000,
+    "pricePerSqft": 641,
+    "yoyAppreciation": 2.4,
+    "avgDaysOnMarket": 26,
+    "listToSaleRatio": 98.6,
+    "salesLastQuarter": 47,
+    "walkScore": 93,
+    "commute": {
+      "googleKw": 9,
+      "rdPark": 7,
+      "ionStop": { "name": "Waterloo Public Square", "minutes": 2 },
+      "goStation": 14,
+      "highway401": 22,
+      "torontoUnionGo": 110
+    },
+    "schools": [
+      { "name": "Empire Public School", "board": "WRDSB", "rating": 8.4 },
+      { "name": "St. Louis Adult Learning", "board": "WCDSB", "rating": 7.6 },
+      { "name": "Waterloo Collegiate Institute", "board": "WRDSB", "rating": 8.4 }
+    ],
+    "amenities": ["ION LRT", "Waterloo Park", "Vincenzo's", "Spur Line Trail", "Perimeter Institute"],
+    "priceHistory": [
+      { "year": 2021, "median": 548000 },
+      { "year": 2022, "median": 634000 },
+      { "year": 2023, "median": 587000 },
+      { "year": 2024, "median": 598000 },
+      { "year": 2025, "median": 612000 }
+    ],
+    "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=70",
+    "coords": { "lat": 43.4644, "lng": -80.5225 }
+  },
+  {
+    "id": "downtown-kitchener",
+    "name": "Downtown Kitchener",
+    "city": "Kitchener",
+    "tagline": "The Tech District — Google, Communitech, ION and GO",
+    "description": "Where the region's tech economy actually sits. Google KW, Communitech and the Catalyst commons are inside a few blocks, and the Kitchener GO station puts Union Station on a one-seat ride. Lofts in converted rubber factories, plus new towers on King.",
+    "personas": ["tech", "transit", "investors", "commuters"],
+    "medianPrice": 528000,
+    "pricePerSqft": 598,
+    "yoyAppreciation": 3.2,
+    "avgDaysOnMarket": 29,
+    "listToSaleRatio": 98.1,
+    "salesLastQuarter": 54,
+    "walkScore": 91,
+    "commute": {
+      "googleKw": 3,
+      "rdPark": 14,
+      "ionStop": { "name": "Victoria Park / Frederick", "minutes": 3 },
+      "goStation": 4,
+      "highway401": 14,
+      "torontoUnionGo": 96
+    },
+    "schools": [
+      { "name": "Suddaby Public School", "board": "WRDSB", "rating": 7.4 },
+      { "name": "St. Mary's High School", "board": "WCDSB", "rating": 8.2 },
+      { "name": "Cameron Heights Collegiate", "board": "WRDSB", "rating": 7.9 }
+    ],
+    "amenities": ["Google KW", "Communitech Hub", "Victoria Park", "Kitchener Market", "THEMUSEUM"],
+    "priceHistory": [
+      { "year": 2021, "median": 462000 },
+      { "year": 2022, "median": 549000 },
+      { "year": 2023, "median": 498000 },
+      { "year": 2024, "median": 512000 },
+      { "year": 2025, "median": 528000 }
+    ],
+    "image": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=1400&q=70",
+    "coords": { "lat": 43.4516, "lng": -80.4925 }
+  },
+  {
+    "id": "doon-south",
+    "name": "Doon South",
+    "city": "Kitchener",
+    "tagline": "New builds, big garages, 401 in six minutes",
+    "description": "The commuter's math problem solved: newer 2010s+ construction, double garages, and the fastest 401 access in the city. Doon South wins Toronto-bound buyers who refuse to trade square footage for a shorter drive.",
+    "personas": ["commuters", "families", "move-up"],
+    "medianPrice": 892000,
+    "pricePerSqft": 371,
+    "yoyAppreciation": 3.9,
+    "avgDaysOnMarket": 18,
+    "listToSaleRatio": 99.7,
+    "salesLastQuarter": 38,
+    "walkScore": 32,
+    "commute": {
+      "googleKw": 15,
+      "rdPark": 26,
+      "ionStop": { "name": "Fairway Station", "minutes": 11 },
+      "goStation": 16,
+      "highway401": 6,
+      "torontoUnionGo": 104
+    },
+    "schools": [
+      { "name": "Groh Public School", "board": "WRDSB", "rating": 8.2 },
+      { "name": "St. Kateri Tekakwitha", "board": "WCDSB", "rating": 8.3 },
+      { "name": "Huron Heights Secondary", "board": "WRDSB", "rating": 7.8 }
+    ],
+    "amenities": ["Conestoga College Doon", "Homer Watson Park", "Grand River trails", "Pioneer Tower lookout"],
+    "priceHistory": [
+      { "year": 2021, "median": 782000 },
+      { "year": 2022, "median": 901000 },
+      { "year": 2023, "median": 828000 },
+      { "year": 2024, "median": 858000 },
+      { "year": 2025, "median": 892000 }
+    ],
+    "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1400&q=70",
+    "coords": { "lat": 43.3862, "lng": -80.4126 }
+  },
+  {
+    "id": "kiwanis-park",
+    "name": "Kiwanis Park / Bridgeport",
+    "city": "Kitchener",
+    "tagline": "Riverfront lots and the region's best swimming hole",
+    "description": "Grand River frontage, the Kiwanis Park pool and the Walter Bean trail out the back door. A quiet pocket that trades at a discount to Westmount while offering the same lot sizes — the region's most under-appreciated value play.",
+    "personas": ["families", "value", "move-up"],
+    "medianPrice": 798000,
+    "pricePerSqft": 356,
+    "yoyAppreciation": 5.1,
+    "avgDaysOnMarket": 17,
+    "listToSaleRatio": 100.1,
+    "salesLastQuarter": 21,
+    "walkScore": 41,
+    "commute": {
+      "googleKw": 12,
+      "rdPark": 12,
+      "ionStop": { "name": "Grand River Hospital", "minutes": 9 },
+      "goStation": 13,
+      "highway401": 21,
+      "torontoUnionGo": 106
+    },
+    "schools": [
+      { "name": "Bridgeport Public School", "board": "WRDSB", "rating": 7.7 },
+      { "name": "St. Bernadette Catholic", "board": "WCDSB", "rating": 7.9 },
+      { "name": "Bluevale Collegiate", "board": "WRDSB", "rating": 8.5 }
+    ],
+    "amenities": ["Kiwanis Park & pool", "Walter Bean Trail", "Grand River", "Bingemans"],
+    "priceHistory": [
+      { "year": 2021, "median": 681000 },
+      { "year": 2022, "median": 792000 },
+      { "year": 2023, "median": 724000 },
+      { "year": 2024, "median": 759000 },
+      { "year": 2025, "median": 798000 }
+    ],
+    "image": "https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?auto=format&fit=crop&w=1400&q=70",
+    "coords": { "lat": 43.4808, "lng": -80.4562 }
+  },
+  {
+    "id": "belmont-village",
+    "name": "Belmont Village",
+    "city": "Kitchener",
+    "tagline": "Espresso, boutiques and century homes",
+    "description": "A three-block main street with the best coffee-to-boutique ratio in the region, wrapped in century homes on deep lots. Buyers here pay a premium to walk to dinner and still get a front porch.",
+    "personas": ["move-up", "downsizers", "families"],
+    "medianPrice": 924000,
+    "pricePerSqft": 441,
+    "yoyAppreciation": 4.4,
+    "avgDaysOnMarket": 13,
+    "listToSaleRatio": 101.6,
+    "salesLastQuarter": 16,
+    "walkScore": 78,
+    "commute": {
+      "googleKw": 8,
+      "rdPark": 11,
+      "ionStop": { "name": "Grand River Hospital", "minutes": 5 },
+      "goStation": 9,
+      "highway401": 17,
+      "torontoUnionGo": 102
+    },
+    "schools": [
+      { "name": "Sheppard Public School", "board": "WRDSB", "rating": 8.0 },
+      { "name": "St. Dominic Savio", "board": "WCDSB", "rating": 8.2 },
+      { "name": "Kitchener-Waterloo Collegiate", "board": "WRDSB", "rating": 8.6 }
+    ],
+    "amenities": ["Belmont Village shops", "Iron Horse Trail", "Westmount Golf", "Grand River Hospital"],
+    "priceHistory": [
+      { "year": 2021, "median": 798000 },
+      { "year": 2022, "median": 916000 },
+      { "year": 2023, "median": 851000 },
+      { "year": 2024, "median": 885000 },
+      { "year": 2025, "median": 924000 }
+    ],
+    "image": "https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=1400&q=70",
+    "coords": { "lat": 43.4433, "lng": -80.5017 }
+  },
+  {
+    "id": "eastbridge",
+    "name": "Eastbridge",
+    "city": "Waterloo",
+    "tagline": "Family-first planning, parks on every block",
+    "description": "A 1990s master-planned community built around walkable parks and a village square. Deep buyer pool, consistent absorption, and a school catchment that keeps families from leaving once they arrive.",
+    "personas": ["families", "tech", "value"],
+    "medianPrice": 878000,
+    "pricePerSqft": 379,
+    "yoyAppreciation": 4.2,
+    "avgDaysOnMarket": 15,
+    "listToSaleRatio": 100.6,
+    "salesLastQuarter": 27,
+    "walkScore": 49,
+    "commute": {
+      "googleKw": 13,
+      "rdPark": 11,
+      "ionStop": { "name": "Conestoga Station", "minutes": 7 },
+      "goStation": 15,
+      "highway401": 26,
+      "torontoUnionGo": 112
+    },
+    "schools": [
+      { "name": "Lester B. Pearson P.S.", "board": "WRDSB", "rating": 8.4 },
+      { "name": "St. Luke Catholic", "board": "WCDSB", "rating": 8.1 },
+      { "name": "Bluevale Collegiate", "board": "WRDSB", "rating": 8.5 }
+    ],
+    "amenities": ["Eastbridge Village Square", "RIM Park", "Grey Silo Golf", "Conestoga Mall"],
+    "priceHistory": [
+      { "year": 2021, "median": 762000 },
+      { "year": 2022, "median": 884000 },
+      { "year": 2023, "median": 812000 },
+      { "year": 2024, "median": 843000 },
+      { "year": 2025, "median": 878000 }
+    ],
+    "image": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1400&q=70",
+    "coords": { "lat": 43.4926, "lng": -80.4884 }
+  },
+  {
+    "id": "west-galt",
+    "name": "West Galt",
+    "city": "Cambridge",
+    "tagline": "Limestone heritage above the Grand",
+    "description": "The most architecturally distinct pocket in the region — limestone heritage homes on the escarpment above the Grand River, with Gaslight District culture a bridge away. Toronto buyers who want character over new build land here.",
+    "personas": ["luxury", "commuters", "move-up"],
+    "medianPrice": 862000,
+    "pricePerSqft": 362,
+    "yoyAppreciation": 3.5,
+    "avgDaysOnMarket": 22,
+    "listToSaleRatio": 99.2,
+    "salesLastQuarter": 19,
+    "walkScore": 66,
+    "commute": {
+      "googleKw": 24,
+      "rdPark": 32,
+      "ionStop": { "name": "Fairway Station (bus link)", "minutes": 22 },
+      "goStation": 26,
+      "highway401": 8,
+      "torontoUnionGo": 99
+    },
+    "schools": [
+      { "name": "Central Public School", "board": "WRDSB", "rating": 7.8 },
+      { "name": "St. Augustine Catholic", "board": "WCDSB", "rating": 8.0 },
+      { "name": "Southwood Secondary", "board": "WRDSB", "rating": 7.6 }
+    ],
+    "amenities": ["Gaslight District", "Mill Race Park", "Dickson Hill", "Grand River"],
+    "priceHistory": [
+      { "year": 2021, "median": 742000 },
+      { "year": 2022, "median": 861000 },
+      { "year": 2023, "median": 798000 },
+      { "year": 2024, "median": 833000 },
+      { "year": 2025, "median": 862000 }
+    ],
+    "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=70",
+    "coords": { "lat": 43.3557, "lng": -80.3223 }
+  },
+  {
+    "id": "hespeler-village",
+    "name": "Hespeler Village",
+    "city": "Cambridge",
+    "tagline": "Mill-town main street, best 401 access in the region",
+    "description": "A restored mill village with a genuine main street, priced well below Waterloo comparables. Four minutes to the 401 makes it the shortest Toronto commute in Waterloo Region — the value pick for GTA transplants.",
+    "personas": ["commuters", "value", "families"],
+    "medianPrice": 748000,
+    "pricePerSqft": 341,
+    "yoyAppreciation": 4.6,
+    "avgDaysOnMarket": 19,
+    "listToSaleRatio": 99.8,
+    "salesLastQuarter": 25,
+    "walkScore": 58,
+    "commute": {
+      "googleKw": 19,
+      "rdPark": 27,
+      "ionStop": { "name": "Fairway Station (bus link)", "minutes": 18 },
+      "goStation": 21,
+      "highway401": 4,
+      "torontoUnionGo": 94
+    },
+    "schools": [
+      { "name": "Hespeler Public School", "board": "WRDSB", "rating": 7.6 },
+      { "name": "St. Michael Catholic", "board": "WCDSB", "rating": 7.9 },
+      { "name": "Jacob Hespeler Secondary", "board": "WRDSB", "rating": 8.0 }
+    ],
+    "amenities": ["Hespeler Mill Pond", "Forbes Park", "Speed River trails", "Toyota Cambridge"],
+    "priceHistory": [
+      { "year": 2021, "median": 636000 },
+      { "year": 2022, "median": 748000 },
+      { "year": 2023, "median": 686000 },
+      { "year": 2024, "median": 715000 },
+      { "year": 2025, "median": 748000 }
+    ],
+    "image": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1400&q=70",
+    "coords": { "lat": 43.4237, "lng": -80.3134 }
+  },
+  {
+    "id": "lakeshore",
+    "name": "Lakeshore",
+    "city": "Waterloo",
+    "tagline": "Backsplits, big yards, first-time-buyer friendly",
+    "description": "Waterloo's most accessible detached market. 1970s backsplits on generous lots, a short hop to Conestoga Mall and the north ION terminus. Where first-time buyers get into Waterloo without a condo.",
+    "personas": ["first-time", "value", "families", "transit"],
+    "medianPrice": 726000,
+    "pricePerSqft": 388,
+    "yoyAppreciation": 4.9,
+    "avgDaysOnMarket": 14,
+    "listToSaleRatio": 101.0,
+    "salesLastQuarter": 33,
+    "walkScore": 55,
+    "commute": {
+      "googleKw": 14,
+      "rdPark": 10,
+      "ionStop": { "name": "Conestoga Station", "minutes": 5 },
+      "goStation": 16,
+      "highway401": 27,
+      "torontoUnionGo": 113
+    },
+    "schools": [
+      { "name": "Northlake Woods P.S.", "board": "WRDSB", "rating": 8.1 },
+      { "name": "St. Matthew Catholic", "board": "WCDSB", "rating": 7.8 },
+      { "name": "Bluevale Collegiate", "board": "WRDSB", "rating": 8.5 }
+    ],
+    "amenities": ["Conestoga Mall", "RIM Park", "Lakeshore Village plaza", "Laurel Creek trails"],
+    "priceHistory": [
+      { "year": 2021, "median": 618000 },
+      { "year": 2022, "median": 731000 },
+      { "year": 2023, "median": 668000 },
+      { "year": 2024, "median": 692000 },
+      { "year": 2025, "median": 726000 }
+    ],
+    "image": "https://images.unsplash.com/photo-1576941089067-2de3c901e126?auto=format&fit=crop&w=1400&q=70",
+    "coords": { "lat": 43.5031, "lng": -80.5219 }
+  }
+]
