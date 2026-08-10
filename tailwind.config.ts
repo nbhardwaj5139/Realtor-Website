@@ -58,6 +58,19 @@ const config: Config = {
           bright: '#D4AF37',
           soft: '#E3D2B8',
         },
+        /* Second design direction — "Move Guide": warm paper, forest, clay */
+        guide: {
+          paper: '#FBFAF7',
+          paperDark: '#F1EEE7',
+          ink: '#141F1B',
+          inkSoft: '#3D4B45',
+          muted: '#6B7A72',
+          line: '#E2DED4',
+          forest: '#1F6F4A',
+          forestDark: '#175538',
+          clay: '#C4643B',
+          mint: '#E8F2EC',
+        },
       },
       fontFamily: {
         serif: ['var(--font-playfair)', 'Georgia', 'serif'],
