@@ -9,7 +9,7 @@ import { Input, Textarea } from '@/components/ui/input';
 import { Label, FieldError } from '@/components/ui/label';
 import { Reveal } from '@/components/ui/reveal';
 import { useToast } from '@/components/ui/toast';
-import { siteConfig, hasContactDetails } from '@/config/site';
+import { siteConfig, hasContactDetails, leadAgents } from '@/config/site';
 import { contactSchema, type ContactFormValues } from '@/lib/schemas';
 
 export function ContactCta() {
@@ -56,15 +56,16 @@ export function ContactCta() {
           <Reveal from="left">
             <p className="eyebrow mb-4">Let&apos;s talk</p>
             <h2 className="heading-serif text-balance text-3xl font-medium leading-[1.12] text-slate-ink sm:text-4xl lg:text-[2.75rem]">
-              Two agents. One conversation. No pressure.
+              A full team behind one conversation.
             </h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground">
               Whether you&apos;re nine months out or you got a job offer in Toronto yesterday,
-              start with a call. We&apos;ll tell you honestly whether now is your moment.
+              start with a call. Two brokers, a partner realtor and two full-time assistants —
+              so nothing waits on one person&apos;s calendar.
             </p>
 
             <div className="mt-10 space-y-6">
-              {siteConfig.agents.map((agent) => (
+              {leadAgents.map((agent) => (
                 <div key={agent.name} className="flex gap-5">
                   <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-slate-ink font-serif text-lg font-semibold text-gold">
                     {agent.initials}

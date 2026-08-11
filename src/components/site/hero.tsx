@@ -2,19 +2,23 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { ArrowDown, Clock, Lock, MapPin } from 'lucide-react';
+import { ArrowDown, Clock, MapPin, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { siteConfig } from '@/config/site';
 import { ValuationWizard } from './valuation-wizard';
 
 /**
- * Non-performance trust signals — these describe how the tool works, not a
- * track record. Team statistics render only once real figures are supplied
- * (see siteConfig.content.showPerformanceStats).
+ * Publicly verifiable proof points only. Sales volume, days on market and
+ * list-to-sale ratio stay off (siteConfig.content.showPerformanceStats) — those
+ * figures aren't published anywhere, so there is nothing real to show.
  */
 const trustPoints = [
-  { icon: Clock, label: 'Takes about 40 seconds' },
-  { icon: Lock, label: 'No account required' },
-  { icon: MapPin, label: '12 KW neighbourhoods' },
+  {
+    icon: Star,
+    label: `${siteConfig.proof.googleRating} from ${siteConfig.proof.googleReviewCount} Google reviews`,
+  },
+  { icon: Clock, label: `${siteConfig.proof.yearsServing} in Waterloo Region` },
+  { icon: MapPin, label: 'Brokered by eXp Realty' },
 ];
 
 export function Hero() {
@@ -64,8 +68,8 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.16, ease: [0.22, 1, 0.36, 1] }}
             className="mt-7 max-w-xl text-lg leading-relaxed text-white/70"
           >
-            Real numbers from real Waterloo Region streets — Westmount, Laurelwood, Doon South,
-            Belmont Village. Get an instant range, then decide whether you want to hear from us.
+            Real numbers from the communities we work in — Laurelwood, Vista Hills, Doon, Huron,
+            Deer Ridge. Get an instant range, then decide whether you want to hear from us.
           </motion.p>
 
           <motion.div

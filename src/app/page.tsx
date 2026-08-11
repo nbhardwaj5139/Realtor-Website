@@ -5,7 +5,7 @@ import { NeighbourhoodExplorer } from '@/components/site/neighbourhood-explorer'
 import { ListingsShowcase } from '@/components/site/listings-showcase';
 import { SellingProcess } from '@/components/site/selling-process';
 import { CalculatorSection } from '@/components/site/calculator';
-import { TestimonialsCarousel } from '@/components/site/testimonials-carousel';
+import { Reviews } from '@/components/site/reviews';
 import { ContactCta } from '@/components/site/contact-cta';
 import { Footer } from '@/components/site/footer';
 import { DemoBadge } from '@/components/site/demo-badge';
@@ -61,7 +61,7 @@ export default function HomePage() {
         <ListingsShowcase />
         <SellingProcess />
         <CalculatorSection />
-        {siteConfig.content.showTestimonials && <TestimonialsCarousel />}
+        {siteConfig.content.showTestimonials && <Reviews />}
         <ContactCta />
       </main>
       <Footer />

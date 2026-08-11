@@ -1,80 +1,83 @@
 [
   {
-    "id": "t-01",
-    "name": "The Nguyen Family",
-    "location": "Laurelwood, Waterloo",
-    "type": "Seller",
-    "headline": "Sold $52,000 over asking in 4 days",
-    "quote": "We interviewed three teams. The other two talked about the market — Elena and Devon walked us through a room-by-room prep list, brought in their stager and photographer, and had a launch date on the calendar before they left. Four days later we had three offers.",
-    "result": "$1,301,000 · 4 days on market · 104% of list",
+    "id": "g-robin-mathew",
+    "name": "robin mathew",
+    "quote": "We have used Team Pinto since late 2019 and it's been an absolute pleasure. Both Aron and Angelica were phenomenal to help us understand and navigate our first investment property in Canada. Aron was patient in setting up showings and having a seamless experience coordinating between Toronto and the KW area. Angelica was great at providing us details of what the mortgage requirements and help us with what we needed given we were new to the country. We have stayed in touch over the years and kept us posted about new projects and initiatives that we would like to invest in. I would highly recommend Team Pinto for all your real estate needs.",
+    "source": "Google",
+    "when": "2 years ago",
     "rating": 5,
-    "videoUrl": "https://www.youtube.com/embed/ScMzIvxBSi4",
-    "thumbnail": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=900&q=70",
-    "avatarInitials": "NF"
+    "initials": "RM"
   },
   {
-    "id": "t-02",
-    "name": "Priya & Marcus",
-    "location": "Downtown Kitchener",
-    "type": "Buyer",
-    "headline": "Relocated from Toronto without losing a commute day",
-    "quote": "I still go into the Toronto office twice a week. Devon mapped every listing against the GO schedule and told us honestly which ones would make the 6:52. We bought four blocks from the station and my commute got shorter than it was in Etobicoke.",
-    "result": "Purchased at $562,000 · 96 min door-to-door to Union",
+    "id": "g-nitin-bhardwaj",
+    "name": "Nitin Bhardwaj",
+    "quote": "I had an excellent experience working with Team Pinto Real Estate, Aron and Angelica. They went above and beyond to help me find the right house and were incredibly patient and thorough throughout the process. In a competitive situation with multiple offers, their negotiation skills were exceptional and ultimately got the job done. I'm very grateful for their dedication and would highly recommend Aron, Angelica, and Team Pinto Real Estate to anyone looking for a reliable and hardworking real estate team.",
+    "source": "Google",
+    "when": "6 months ago",
     "rating": 5,
-    "videoUrl": "https://www.youtube.com/embed/ScMzIvxBSi4",
-    "thumbnail": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=900&q=70",
-    "avatarInitials": "PM"
+    "initials": "NB"
   },
   {
-    "id": "t-03",
-    "name": "David Okonkwo",
-    "location": "Westmount, Kitchener",
-    "type": "Seller",
-    "headline": "Four offers on an estate lot in a slow month",
-    "quote": "They told me to wait three weeks and spend $8,000 on staging and photography in a market everyone said was dead. I pushed back. They were right — four offers, $67,000 over, and the buyer told me later the drone video is what got them in the door.",
-    "result": "$1,662,000 · 7 days · 4 offers",
+    "id": "g-patricia-denommee-mcdonald",
+    "name": "Patricia Denommee-McDonald",
+    "quote": "Aron and Angelica deserve the highest praise for their exceptional service and dedication throughout our home buying and selling process. Their patience and kindness were evident as they tirelessly worked with us over the course of several years to find our dream home. When we finally found our dream home, Aron and Angelica went above and beyond to ensure our selling process was seamless. Their staging expertise transformed our home, making it more beautiful than ever. Their guidance and expertise were crucial in successfully managing a bidding war on our home, ultimately resulting in a sale within 24 hours.",
+    "source": "Google",
+    "when": "2 years ago",
     "rating": 5,
-    "videoUrl": "https://www.youtube.com/embed/ScMzIvxBSi4",
-    "thumbnail": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=70",
-    "avatarInitials": "DO"
+    "initials": "PD"
   },
   {
-    "id": "t-04",
-    "name": "Sam & Jordan Reilly",
-    "location": "Lakeshore, Waterloo",
-    "type": "First-time Buyer",
-    "headline": "First home, and nobody made us feel small for asking",
-    "quote": "We had a lot of questions and a modest budget. They answered every one of them and never once pushed us above what we said we were comfortable with. The land transfer tax rebate alone paid for our appliances.",
-    "result": "Purchased at $704,000 · $4,000 FTB rebate applied",
+    "id": "g-breydi-lopez",
+    "name": "Breydi Fabiola Lopez Lopez",
+    "quote": "My husband and I recently worked with Team Pinto when we bought our first home, and we couldn't have asked for a better experience. Angelica and Aron were amazing; they helped us find our dream home. Angelica's extensive knowledge and professionalism, along with her dedication to helping us find the best option for our needs, made us feel confident and in the best hands. We highly recommend the Team Pinto!",
+    "source": "Google",
+    "when": "6 months ago",
     "rating": 5,
-    "videoUrl": "https://www.youtube.com/embed/ScMzIvxBSi4",
-    "thumbnail": "https://images.unsplash.com/photo-1576941089067-2de3c901e126?auto=format&fit=crop&w=900&q=70",
-    "avatarInitials": "SR"
+    "initials": "BL"
   },
   {
-    "id": "t-05",
-    "name": "Dr. Anita Shah",
-    "location": "Beechwood, Waterloo",
-    "type": "Seller & Buyer",
-    "headline": "Sold and bought in the same week without a bridge loan",
-    "quote": "Coordinating a sale and a purchase with two kids and a hospital schedule sounded impossible. They ran both timelines on one calendar, negotiated matching closing dates, and I never had to think about it.",
-    "result": "Sold $1,118,000 · Purchased same week · Matched closings",
+    "id": "g-adam-spadotto",
+    "name": "Adam Spadotto",
+    "quote": "We had a very good experience buying our first home with Team Pinto! Aron walked us through the process, answered our many questions and concerns, while he made himself available when ever needed. Aron was professional, honest and trustworthy and we feel like all parties walked away satisfied! Highly recommended.",
+    "source": "Google",
+    "when": "1 year ago",
     "rating": 5,
-    "videoUrl": "https://www.youtube.com/embed/ScMzIvxBSi4",
-    "thumbnail": "https://images.unsplash.com/photo-1600573472592-401b489a3cdc?auto=format&fit=crop&w=900&q=70",
-    "avatarInitials": "AS"
+    "initials": "AS"
   },
   {
-    "id": "t-06",
-    "name": "The Bergerons",
-    "location": "Hespeler Village, Cambridge",
-    "type": "Buyer",
-    "headline": "Talked us out of the wrong house twice",
-    "quote": "Twice they told us to walk away from houses we loved — once for a foundation issue, once because the price didn't hold up against the comps. That's the part you don't get from an app.",
-    "result": "Purchased at $771,000 · Third offer accepted",
+    "id": "g-madiha-nasrullah",
+    "name": "Madiha Nasrullah",
+    "quote": "My experience with the Pinto team was very satisfactory; Aron was always responsive and we got our questions answered immediately. He went above and beyond to help facilitate buying a pre-con condo. I would love to work with him again. Keep up the great work :)",
+    "source": "Google",
+    "when": "5 years ago",
     "rating": 5,
-    "videoUrl": "https://www.youtube.com/embed/ScMzIvxBSi4",
-    "thumbnail": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=900&q=70",
-    "avatarInitials": "TB"
+    "initials": "MN"
+  },
+  {
+    "id": "g-amanda-k",
+    "name": "Amanda K",
+    "quote": "Team Pinto are amazing! They are easily accessible, listen to your needs, and work diligently and professionally to assist you in your real estate needs. We couldn't have been happier to have worked with them!",
+    "source": "Google",
+    "when": "6 months ago",
+    "rating": 5,
+    "initials": "AK"
+  },
+  {
+    "id": "g-ravit-lasman-lechter",
+    "name": "Ravit Lasman Lechter",
+    "quote": "I hired Aron for the sale of my condo and purchase of my house. The condo market was slow but Aron and his team did a great job marketing the place and ultimately landed an offer / sale. Thank you, Aron!",
+    "source": "Google",
+    "when": "4 years ago",
+    "rating": 5,
+    "initials": "RL"
+  },
+  {
+    "id": "g-andres-perez",
+    "name": "andres perez",
+    "quote": "Very professional team. Team Pinto is always looking after their clients and the wellness of the families. Truly recommend the services this team offers, no doubt at all.",
+    "source": "Google",
+    "when": "6 months ago",
+    "rating": 5,
+    "initials": "AP"
   }
 ]

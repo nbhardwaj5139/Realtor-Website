@@ -85,18 +85,22 @@ export type Listing = {
   featured: boolean;
 };
 
+/**
+ * A published client review.
+ *
+ * Shape mirrors what a real review platform gives you — author, text, rating,
+ * recency, source. There is deliberately no "result" field: outcomes like
+ * "sold $50k over asking" are claims that must come from the team's own
+ * records, not be attached to a review that doesn't state them.
+ */
 export type Testimonial = {
   id: string;
   name: string;
-  location: string;
-  type: string;
-  headline: string;
   quote: string;
-  result: string;
+  source: string;
+  when: string;
   rating: number;
-  videoUrl: string;
-  thumbnail: string;
-  avatarInitials: string;
+  initials: string;
 };
 
 export type ProcessStep = {

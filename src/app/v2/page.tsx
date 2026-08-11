@@ -7,6 +7,7 @@ import { NeighbourhoodTable } from '@/components/v2/neighbourhood-table';
 import { Affordability } from '@/components/v2/affordability';
 import { ClosingCosts } from '@/components/v2/closing-costs';
 import { GuideContact } from '@/components/v2/guide-contact';
+import { Reviews } from '@/components/site/reviews';
 import { DemoBadge } from '@/components/site/demo-badge';
 import { siteConfig } from '@/config/site';
 
@@ -26,6 +27,7 @@ export default function MoveGuidePage() {
         <NeighbourhoodTable />
         <Affordability />
         <ClosingCosts />
+        {siteConfig.content.showTestimonials && <Reviews variant="guide" />}
         <GuideContact />
       </main>
 

@@ -25,14 +25,19 @@ export function getListing(id: string) {
 
 export const featuredListings = listings.filter((l) => l.featured);
 
+/**
+ * Kept in sync with the personas actually present in neighbourhoods.json —
+ * a filter with no matches renders an empty state and looks broken.
+ */
 export const PERSONA_FILTERS: { value: Persona | 'all'; label: string; blurb: string }[] = [
-  { value: 'all', label: 'All neighbourhoods', blurb: 'Every pocket we cover across the region' },
-  { value: 'tech', label: 'Tech & UW', blurb: 'Near Google KW, the R&D Park and campus' },
-  { value: 'families', label: 'Families', blurb: 'Top WRDSB & WCDSB catchments, parks, safety' },
+  { value: 'all', label: 'All communities', blurb: 'Every community we cover across the region' },
+  { value: 'families', label: 'Families', blurb: 'Top WRDSB & WCDSB catchments, parks, green space' },
   { value: 'commuters', label: 'Toronto commuters', blurb: 'Fast 401 and GO access to Union' },
-  { value: 'transit', label: 'ION & transit', blurb: 'Walkable to an LRT stop' },
-  { value: 'first-time', label: 'First-time buyers', blurb: 'Entry pricing that still clears inspection' },
-  { value: 'luxury', label: 'Luxury', blurb: 'Estate lots and premium finishes' },
+  { value: 'tech', label: 'Tech & UW', blurb: 'Near Google KW, the R&D Park and campus' },
+  { value: 'first-time', label: 'First-time buyers', blurb: 'The most attainable entry points' },
+  { value: 'value', label: 'Best value', blurb: 'More house per dollar than the regional median' },
+  { value: 'move-up', label: 'Move-up buyers', blurb: 'Space to grow without leaving the region' },
+  { value: 'luxury', label: 'Luxury', blurb: 'Estate lots, ravine settings and golf-course addresses' },
 ];
 
 export const PROPERTY_TYPES = [

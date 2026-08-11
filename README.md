@@ -83,68 +83,74 @@ and never block a visitor from seeing their result.
 
 ---
 
-## Branding & what still needs filling in
+## Branding
 
-All branding lives in `src/config/site.ts`. The team name and agent names are
-set; **the fields below are deliberately blank** and the UI hides each element
-until a real value is supplied — nothing is invented:
+Real details from teampinto.com, all in `src/config/site.ts`:
 
-| Field | Notes |
-|---|---|
-| `brokerage` | Required in Ontario real estate advertising. |
-| `phone` / `phoneHref` | Nav, footer and contact block hide the row while blank. |
-| `email`, `office` | Same. Team lead alerts are skipped until an inbox exists. |
-| `agents[].role` | **"Broker", "Broker of Record" and "Salesperson" are regulated designations under REBBA** — use each agent's actual registration title, don't guess. |
-| `agents[].bio` | Hidden while blank. |
-| `social.*` | Icons render only for URLs that are set. |
+- **Team Pinto**, brokered by **eXp Realty**, 675 Riverbend Drive, Kitchener ON N2K 3S3
+- Five team members with their actual titles — Angelica Pinto and Aron Pinto are
+  both Real Estate Brokers, Tommy Larraguibel is Partner & Realtor®, plus two
+  executive assistants. **Titles are regulated under REBBA — don't edit these
+  without checking RECO registration.**
+- Office line, per-agent direct lines, and the four real social profiles
 
-Colours and type are in `tailwind.config.ts` and `src/app/globals.css`.
+**Still blank:** `email`. Their site uses an "Email Us" form rather than
+publishing an address, so there was nothing to copy. The UI hides the row and
+new-lead alerts are skipped until one is set (`NOTIFY_TO_EMAIL` also works).
 
-### Content flags
+### Content flags — `siteConfig.content`
 
-`siteConfig.content` controls what renders:
-
-| Flag | Default | Effect |
+| Flag | Default | Why |
 |---|---|---|
-| `showPerformanceStats` | `false` | Team track record (sales volume, days on market, list-to-sale). **Off because publishing a record that wasn't supplied would be fabricating claims under a real agent's name.** Turn on only with real, verifiable figures. |
-| `showTestimonials` | `false` | Client testimonial carousel. Off for the same reason; also drops the Reviews nav link. |
-| `demoMode` | `true` | Shows a dismissible "demo build · sample data" badge, labels sample listings, and adds a sample-data line to the footer disclaimer. |
+| `showTestimonials` | **`true`** | Backed by 9 real, attributed Google reviews in `data/testimonials.json`, quoted as written. |
+| `showPerformanceStats` | `false` | Sales volume, days on market and list-to-sale ratio are **not published anywhere by the team**, so there is nothing real to show. `siteConfig.proof` carries the claims that *are* verifiable — 4.9★ from 206 Google reviews, ~10 years, 505K YouTube views. |
+| `demoMode` | `true` | Listings and market figures are still sample data. Shows the "sample data" badge and labels listing cards. |
 
 ---
 
 ## About the data
 
-**Everything in `src/data/` is sample data.** Listings, addresses, sale prices,
-neighbourhood medians and regional statistics are placeholders for layout — they
-are not real properties or transactions. The neighbourhood geography, commute
-structure and school boards reflect real Waterloo Region, but the numbers are
-illustrative.
+Split by provenance:
 
-Before this is anything other than a demo:
+**Real** — team, brokerage, office, agent names/titles/phones, socials, about
+copy, the 9 Google reviews, the 4.9/206 rating, and the nine **communities Team
+Pinto actually features** (Doon, Huron, Kiwanis, Vista Hills, Laurelwood,
+Conservation Meadows, Hidden Valley, Carriage Crossing, Deer Ridge).
 
-1. **Listings and market stats** — swap the JSON files for an MLS/DDF or CREA feed.
+**Sample** — every *number* attached to those communities (medians, days on
+market, price history, school ratings), all listings, and the regional market
+snapshot. Geography and character descriptions are accurate; the figures are
+placeholders.
+
+Before this is more than a demo:
+
+1. **Listings and market stats** — swap the JSON for an MLS/DDF or CREA feed.
+   Note eXp Realty's IDX/DDF terms govern what can be displayed.
 2. **The valuation model** — `src/lib/valuation.ts` is a transparent,
    deterministic estimator over the sample dataset, **not an AVM and not an
-   appraisal**. It exists to give a visitor a defensible-looking range and start
-   a conversation. Point `estimateValue()` at a real AVM when you have one; the
-   UI depends only on the shape of the result.
-3. **Turn off `demoMode`** once 1 and 2 are done.
+   appraisal**. Point `estimateValue()` at a real AVM; the UI only depends on
+   the shape of the result.
+3. **School ratings** — currently placeholders. Source them or drop the column.
+4. **Turn off `demoMode`** once 1–3 are done.
 
-The Ontario land transfer tax brackets, first-time buyer rebate, CMHC premium
+Ontario land transfer tax brackets, the first-time buyer rebate, CMHC premium
 tiers and minimum down payment rules in `src/lib/ontario-tax.ts` and
-`src/lib/mortgage.ts` are real and current as of the 2025 tax year — but they do
-change. Verify against ontario.ca before relying on them.
+`src/lib/mortgage.ts` are real and current as of the 2025 tax year — verify
+against ontario.ca before relying on them.
 
 ---
 
 ## Compliance notes
 
-The public site describes properties rather than buyers, and the Claude prompt
-in `src/lib/listing-kit.ts` is instructed against Ontario Human Rights Code
-violations and guaranteed-return claims. That is a guardrail, not a substitute
-for review — have the brokerage approve copy before it goes on MLS, and confirm
-RECO/CREA advertising requirements (brokerage name, registrant titles) are met
-in `src/config/site.ts`.
+The site describes properties rather than buyers, and the Claude prompt in
+`src/lib/listing-kit.ts` is instructed against Ontario Human Rights Code
+violations and guaranteed-return claims. Guardrails, not a substitute for
+review — have eXp approve copy before it goes on MLS, and confirm RECO/CREA
+advertising requirements are met (brokerage name and registrant titles are
+already wired into the footer and contact block).
+
+Reviews are reproduced from the team's public Google profile, credited by name.
+If any reviewer objects, remove their entry from `data/testimonials.json`.
 
 ---
 
