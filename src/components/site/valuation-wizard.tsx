@@ -374,7 +374,7 @@ export function ValuationWizard({ className }: { className?: string }) {
                                 className={cn(
                                   'flex cursor-pointer items-center gap-3 rounded-lg border p-3 text-sm transition-all',
                                   checked
-                                    ? 'border-gold bg-gold/8'
+                                    ? 'border-gold bg-gold/10'
                                     : 'border-input bg-white hover:border-gold/50',
                                 )}
                               >
@@ -672,7 +672,7 @@ function ValuationResultPanel({
           </div>
         </div>
 
-        <p className="rounded-xl bg-gold/8 p-4 text-sm leading-relaxed text-slate-ink/80">
+        <p className="rounded-xl bg-gold/10 p-4 text-sm leading-relaxed text-slate-ink/80">
           {result.marketNote}
         </p>
 

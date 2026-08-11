@@ -370,7 +370,7 @@ function SummaryTile({
     <div
       className={cn(
         'rounded-2xl border p-5',
-        accent ? 'border-gold/40 bg-gold/8' : 'border-border bg-white',
+        accent ? 'border-gold/40 bg-gold/10' : 'border-border bg-white',
       )}
     >
       <p className="text-[10px] uppercase tracking-[0.16em] text-muted-foreground">{label}</p>

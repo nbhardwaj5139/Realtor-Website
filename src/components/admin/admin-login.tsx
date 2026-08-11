@@ -80,7 +80,7 @@ export function AdminLogin({ showDemoHint }: { showDemoHint: boolean }) {
           <FieldError>{errors.password?.message}</FieldError>
 
           {error && (
-            <p className="mt-3 rounded-lg bg-destructive/8 p-3 text-sm text-destructive">{error}</p>
+            <p className="mt-3 rounded-lg bg-destructive/10 p-3 text-sm text-destructive">{error}</p>
           )}
 
           <Button type="submit" className="mt-6 w-full" size="lg" disabled={isSubmitting}>

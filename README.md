@@ -18,26 +18,29 @@ copy generator uses built-in templates. Add keys when you want the real thing.
 
 ## What's here
 
-### Public site (`/`)
+Three design directions on the same engine, so they can be compared live.
+All share `src/lib`, `src/data`, `src/config/site.ts` and the lead pipeline.
 
-| Section | What it does |
-|---|---|
-| **Hero + valuation wizard** | Four-step lead magnet — address & neighbourhood → property type → beds/baths/upgrades → contact gate. The estimate is visible-but-blurred behind the gate, then reveals a range, the factors that moved it, comparable sales and a market note. |
-| **Neighbourhood explorer** | Twelve KW neighbourhoods filtered by buyer persona (tech, families, Toronto commuters, ION transit, first-time, luxury). Each opens a modal with commute times to Google KW / the R&D Park / the nearest ION stop / the GO station / the 401, school ratings by board, a five-year median chart and an embedded map. |
-| **Featured listings** | Filter by status, property type and price band. Video-tour modal, and a "Schedule a private tour" booking modal. |
-| **Selling with us** | Interactive five-step listing process timeline, plus a draggable before/after staging slider. |
-| **Calculators** | Mortgage payment (Canadian semi-annual compounding, CMHC premiums, accelerated bi-weekly) and Ontario land transfer tax with the first-time buyer rebate — including what the same purchase would cost in Toronto. |
-| **Market snapshot** | Regional Waterloo Region figures. Team track record and testimonials are built but switched **off** by default — see Content flags. |
-| **Contact** | Direct enquiry form wired to the same lead pipeline. |
+| Route | Direction | Best for |
+|---|---|---|
+| **`/v3`** | **Editorial** — full-bleed photography, large serif display, price search in the hero. Mirrors the information architecture of the current Sierra site, executed with real art direction. | **The one to send.** Closest to what he has, visibly better. |
+| `/v2` | **Move Guide** — light, tool-first. Question-led hero, sortable community comparison table, affordability calculator, closing-cost breakdown. | Pitching the tools rather than the brand. |
+| `/` | **Luxury agency** — dark navy and gold, four-step valuation wizard, listing process timeline, staging slider. | A more traditional high-end agency look. |
+
+### Shared tools
+
+- **Home valuation** — four-step wizard (`/`) or single-screen live-updating form (`/v2`, `/v3`). Same model, same API, contact gate only on the comparables.
+- **Neighbourhood intelligence** — nine communities with commute times to Google KW, the R&D Park, ION, the GO station and the 401, plus school catchments and price history.
+- **Calculators** — mortgage (Canadian semi-annual compounding, CMHC premiums, accelerated bi-weekly), Ontario land transfer tax with the first-time buyer rebate and a Toronto comparison, and affordability against the federal stress test.
+- **Reviews** — the team's real Google reviews, credited by name.
 
 ### Admin dashboard (`/admin`)
 
-- **Lead inbox** — every valuation, tour request and enquiry in one table, with
-  status workflow (new → contacted → nurturing → won → archived), full request
-  detail, and a one-click **Send instant CMA** email.
-- **Listing kit generator** — enter a listing once and get an MLS description,
-  an Instagram caption with KW hashtags, an email blast, and a print-ready open
-  house flyer (previewed inline, downloadable as HTML → print to PDF).
+- **Lead inbox** — every valuation, tour request and enquiry in one table, with a
+  status workflow and a one-click **Send instant CMA** email.
+- **Listing kit generator** — MLS description, Instagram caption with KW
+  hashtags, email blast and a print-ready open house flyer. Uses Claude when
+  `ANTHROPIC_API_KEY` is set, deterministic templates otherwise.
 
 ---
 

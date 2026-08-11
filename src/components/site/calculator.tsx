@@ -131,7 +131,7 @@ export function CalculatorSection() {
                     ))}
                   </div>
                   {!mortgage.meetsMinimumDown && (
-                    <p className="mt-3 flex items-start gap-2 rounded-lg bg-destructive/8 p-3 text-xs leading-relaxed text-destructive">
+                    <p className="mt-3 flex items-start gap-2 rounded-lg bg-destructive/10 p-3 text-xs leading-relaxed text-destructive">
                       <AlertTriangle className="mt-0.5 h-3.5 w-3.5 shrink-0" />
                       Federal minimum for this price is {formatCurrency(minDown)} — 5% on the first
                       $500K, 10% above that, 20% over $1.5M.
@@ -383,7 +383,7 @@ export function CalculatorSection() {
                     </div>
 
                     {/* The KW advantage */}
-                    <div className="mt-5 rounded-xl border border-gold/30 bg-gold/6 p-5">
+                    <div className="mt-5 rounded-xl border border-gold/30 bg-gold/5 p-5">
                       <div className="flex items-start gap-3">
                         <TrendingDown className="mt-0.5 h-5 w-5 shrink-0 text-gold-bright" />
                         <div>

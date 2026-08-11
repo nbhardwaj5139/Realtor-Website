@@ -58,6 +58,17 @@ const config: Config = {
           bright: '#D4AF37',
           soft: '#E3D2B8',
         },
+        /* Third direction — "Editorial": image-led, near-black on warm white */
+        ed: {
+          paper: '#FAF9F7',
+          paperWarm: '#F2EFE9',
+          ink: '#111214',
+          inkSoft: '#4A4A4E',
+          muted: '#7C7872',
+          line: '#E5E0D8',
+          accent: '#A6461F',
+          night: '#0C0C0D',
+        },
         /* Second design direction — "Move Guide": warm paper, forest, clay */
         guide: {
           paper: '#FBFAF7',

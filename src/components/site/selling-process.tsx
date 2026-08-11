@@ -40,7 +40,7 @@ export function SellingProcess() {
                       onClick={() => setActive(i)}
                       className={cn(
                         'group relative flex w-full items-center gap-4 rounded-xl p-3 text-left transition-colors lg:pr-4',
-                        isActive ? 'bg-white/8' : 'hover:bg-white/5',
+                        isActive ? 'bg-white/10' : 'hover:bg-white/5',
                       )}
                     >
                       <span
@@ -144,7 +144,7 @@ export function SellingProcess() {
             </Reveal>
 
             <Reveal delay={0.15} className="mt-10">
-              <div className="flex flex-col gap-4 rounded-2xl border border-gold/25 bg-gold/8 p-6 sm:flex-row sm:items-center sm:justify-between">
+              <div className="flex flex-col gap-4 rounded-2xl border border-gold/25 bg-gold/10 p-6 sm:flex-row sm:items-center sm:justify-between">
                 <div>
                   <p className="heading-serif text-xl font-medium text-white">
                     Want this run on your house?

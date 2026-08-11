@@ -144,7 +144,7 @@ export function Affordability() {
             </div>
 
             {downShortfall && (
-              <div className="mt-4 flex items-start gap-3 rounded-xl border border-guide-clay/30 bg-guide-clay/8 p-4">
+              <div className="mt-4 flex items-start gap-3 rounded-xl border border-guide-clay/30 bg-guide-clay/10 p-4">
                 <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0 text-guide-clay" />
                 <p className="text-[14px] leading-relaxed text-guide-inkSoft">
                   At {formatCurrency(maxPrice)} the federal minimum down payment is{' '}
